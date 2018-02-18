@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         int receiveSMS = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.RECEIVE_SMS);
 
+        int readC = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_CONTACTS);
+
         int readSMS = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_SMS);
         List<String> listPermissionsNeeded = new ArrayList<>();
@@ -56,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         }
         if (readSMS != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.READ_SMS);
+        }
+        if (readC != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.READ_CONTACTS);
         }
         if (permissionSendMessage != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.SEND_SMS);
