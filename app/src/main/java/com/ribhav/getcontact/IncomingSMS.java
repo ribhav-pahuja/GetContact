@@ -1,13 +1,17 @@
 package com.ribhav.getcontact;
 
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.util.Log;
@@ -19,9 +23,9 @@ import java.util.HashMap;
  */
 
 public class IncomingSMS extends BroadcastReceiver {
-    final SmsManager sms = SmsManager.getDefault();
     String password;
     HashMap<String,String> map;
+
     @Override
     public void onReceive(Context context, Intent intent) {
 //        Toast.makeText(context,"The message was received.",Toast.LENGTH_SHORT).show();
