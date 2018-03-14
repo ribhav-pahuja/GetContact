@@ -7,4 +7,4 @@ In this case, we can just send a name as a message from any mobile to our mobile
 <br>
 After receiving this name, the mobile to which the message has been sent checks the contact list of the mobile and if that name is found, it sends the number to the mobile from where the mobile got the request.
 <br>
-The app is right now case sensitive and works on devices operating on android nougat and lower.
+The app is right now case sensitive (the contact to be searched for should be exactly the same as the name saved on your phone) and works on devices operating on android nougat and lower.
